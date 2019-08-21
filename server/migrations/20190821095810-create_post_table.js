@@ -16,6 +16,13 @@ module.exports = {
         allowNull: false,
         autoIncrement: false
       },
+      userId: {
+        type: Sequelize.UUID,
+        references: {
+          model: "Users",
+          key: "id"
+        }
+      },
       image: {
         type: Sequelize.STRING,
         allowNull: false

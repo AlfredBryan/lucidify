@@ -1,17 +1,17 @@
 const like = (sequelize, DataTypes) => {
-  const Like = sequlize.define("Like", {
+  const Like = sequelize.define("Like", {
     id: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
     userId: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4
+      defaultValue: DataTypes.UUIDV4
     },
     postId: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
     like_count: {

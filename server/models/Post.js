@@ -2,8 +2,12 @@ const post = (sequelize, DataTypes) => {
   const Post = sequelize.define("Post", {
     id: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
+    },
+    userId: {
+      type: DataTypes.UUID,
+      defaultValue: DataTypes.UUIDV4
     },
     image: {
       type: DataTypes.STRING,

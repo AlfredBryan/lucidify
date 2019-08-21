@@ -2,16 +2,16 @@ const comment = (sequelize, DataTypes) => {
   const Comment = sequelize.define("Comment", {
     id: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4,
+      defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
     userId: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4
+      defaultValue: DataTypes.UUIDV4
     },
     postId: {
       type: DataTypes.UUID,
-      defaultValue: UUIDV4
+      defaultValue: DataTypes.UUIDV4
     },
     comment: {
       type: DataTypes.STRING,
