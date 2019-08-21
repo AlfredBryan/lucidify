@@ -1,0 +1,42 @@
+{
+  "name": "lucidify",
+  "version": "1.0.0",
+  "description": "A blog app backend with nodejs",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon bin/www",
+    "start": "node bin/www"
+  },
+  "keywords": [
+    "Nodejs",
+    "express",
+    "sequelize"
+  ],
+  "author": "Alfred Chimereze Bryan",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.14.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^2.2.1",
+    "passport": "^0.4.0",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.15.2",
+    "sequelize-cli": "^5.5.0",
+    "validator": "^11.1.0"
+  }
+}
