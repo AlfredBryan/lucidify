@@ -208,21 +208,6 @@ router.put("/user/update/:id", upload, (req, res) => {
     }
   }
 
-  if (Validator.isEmpty(address)) {
-    errors.push({ message: "address field is required" });
-  }
-
-  if (!Validator.isEmpty(address)) {
-    if (
-      !Validator.isLength(address, {
-        min: 5,
-        max: 30
-      })
-    ) {
-      errors.push({ message: "address must be between 5 and 30 characters" });
-    }
-  }
-
   if (errors.length > 0) {
     res.send(errors);
   } else {
@@ -230,8 +215,7 @@ router.put("/user/update/:id", upload, (req, res) => {
       {
         surname: surname,
         first_name: first_name,
-        address: address
-        //image: req.file.secure_url
+        image: req.file.secure_url
       },
       { where: { id: req.params.id } }
     )

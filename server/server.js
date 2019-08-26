@@ -6,6 +6,8 @@ const cookieParser = require("cookie-parser");
 const passport = require("passport");
 
 const userRouter = require("./routes/user");
+const postRouter = require("./routes/post");
+const commentRouter = require("./routes/comment");
 
 const app = express();
 
@@ -17,6 +19,8 @@ app.use(cookieParser());
 
 // Add routes
 app.use("/api/v1", userRouter);
+app.use("/api/v1", postRouter);
+app.use("/api/v1", commentRouter);
 
 app.get("*", (req, res) => {
   res.status(200).send({

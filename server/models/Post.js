@@ -5,7 +5,7 @@ const post = (sequelize, DataTypes) => {
       defaultValue: DataTypes.UUIDV4,
       primaryKey: true
     },
-    userId: {
+    creatorId: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4
     },
@@ -29,12 +29,15 @@ const post = (sequelize, DataTypes) => {
         unique: false,
         model: models.Comment
       },
-      foreignKey: "postId"
-    });
-    Post.belongsTo(models.User, {
       foreignKey: "userId"
     });
+    Post.belongsTo(models.User, {
+      foreignKey: "creatorId"
+    });
     Post.hasMany(models.Like, {
+      foreignKey: "postId"
+    });
+    Post.hasMany(models.Comment, {
       foreignKey: "postId"
     });
   };

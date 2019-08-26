@@ -39,7 +39,7 @@ const user = (sequelize, DataTypes) => {
       foreignKey: "userId"
     });
     User.hasMany(models.Post, {
-      foreignKey: "userId"
+      foreignKey: "creatorId"
     });
     User.hasMany(models.Like, {
       foreignKey: "userId"
